@@ -668,7 +668,7 @@
         </Folders>
         <Triggers />
       </Folder>
-      <Folder Id="bb6b2664-ccc2-4d8a-b30e-89ea03bb17e6" Name="Combat" Enabled="true">
+      <Folder Id="bb6b2664-ccc2-4d8a-b30e-89ea03bb17e6" Name="Combat (enable whatever you want)" Enabled="true">
         <Folders>
           <Folder Id="50c1dfb7-45a9-453f-befc-631fcb59b95d" Name="Auto Attack Timer (README inside)" Enabled="false">
             <Folders>
