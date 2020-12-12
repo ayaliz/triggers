@@ -1066,6 +1066,54 @@
               </Trigger>
             </Triggers>
           </Folder>
+          <Folder Id="6999d8a2-8bc2-4e85-9b6b-117733a30053" Name="Ghost Buster (README inside)" Enabled="false">
+            <Folders>
+              <Folder Id="f0c45ea3-67ba-4f16-8841-249d27dbfedc" Name="Backend" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Sequential="True" Name="15" Id="e95997e9-2836-4352-9967-17dc54fdfd7f" RegularExpression="\A.{15}15:1.{8}(?&lt;name&gt;[^:]*):(?&lt;actionID&gt;[^:]*):(?&lt;actionName&gt;[^:]*(: [^:]*)?):4[^:]*:[^:]*:[^:]*:(?&lt;petCheck&gt;[^:]*).+(?&lt;sequenceNumber&gt;[\d\w]{8})" DebugLevel="None">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="${sequenceNumber}" VariableExpression="${actionName}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${actionID}" ExpressionTypeL="String" ExpressionR="\A(0[78]|A4|B2|C[89ABCD]|E(0F|18)|1(D00|0(8[EF]|9[23456])|EB[56])|2BB9|4(0(9C|AA)|2D2|5C[89]))$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" UseTTSTextExpression="${var:${sequenceNumber}} ghosted" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="2000" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:${sequenceNumber}}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="3" LogLevel="-1" VariableName="${sequenceNumber}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="100" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${petCheck}" ExpressionTypeL="String" ExpressionR="EF0000" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${petCheck}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Name="25" Id="8aa90f34-6e34-4309-9624-4a8da858ab80" RegularExpression="\A.{15}25:4.{8}[^:]*:(?&lt;sequenceNumber&gt;[^:]*)">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" VariableName="${sequenceNumber}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" DebugLevel="None">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:${sequenceNumber}}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers>
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="!README in Description tab of this trigger" Id="5cc44ebc-0bca-4e1f-8ecc-3a9266fbde8d" RegularExpression="" DebugLevel="None" Description="This trigger calls out ghosted hits (i.e. abilities you casted but that didn't connect due to the boss becoming&#xD;&#xA;invulnerable or already being dead).">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
         </Folders>
         <Triggers>
           <Trigger Enabled="false" Source="FFXIVNetwork" Name="Leaden Bootshine Announcer" Id="2b7c74dd-4188-4749-bf14-a2191ce5997d" RegularExpression="\A(26|30)\|[^\|]*\|(6b|745)\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)">
