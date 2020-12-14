@@ -458,11 +458,9 @@
                     <Actions>
                       <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="65804b66-54c1-490f-9349-5131b6b706eb" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="65804b66-54c1-490f-9349-5131b6b706eb" ActionType="Trigger" ExecutionDelayExpression="60000">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -474,21 +472,18 @@
                           <ConditionSingle Enabled="true" ExpressionL="${tetherActor}" ExpressionTypeL="String" ExpressionR="${var:tetherActor}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="7F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" LogLevel="-1" UseTTSTextExpression="Thunder" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${tetherActor}" ExpressionTypeL="String" ExpressionR="${var:tetherActor}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="82" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" LogLevel="-1" UseTTSTextExpression="Light" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${tetherActor}" ExpressionTypeL="String" ExpressionR="${var:tetherActor}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="C5" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -503,37 +498,31 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="66" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" LogLevel="-1" UseTTSTextExpression="Protean and stack" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="63" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" LogLevel="-1" UseTTSTextExpression="Protean and groups" UseTTSExclusive="False" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="68" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="4" LogLevel="-1" UseTTSTextExpression="Line and knockback" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="52" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="5" LogLevel="-1" UseTTSTextExpression="Line and out" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="54" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="6" LogLevel="-1" UseTTSTextExpression="Line and move" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="56" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="7" LogLevel="-1" UseTTSTextExpression="Blue safe" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
@@ -541,7 +530,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="6A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="6E" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="8" LogLevel="-1" UseTTSTextExpression="Orange safe" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
@@ -549,55 +537,46 @@
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="6B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="6F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="9" LogLevel="-1" UseTTSTextExpression="Bait at blue, move to orange" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="78" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="10" LogLevel="-1" UseTTSTextExpression="Bait at orange, move to blue" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="77" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="11" LogLevel="-1" UseTTSTextExpression="Fire mechanics" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="8A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="12" LogLevel="-1" UseTTSTextExpression="Thunder mechanics" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="92" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="13" LogLevel="-1" UseTTSTextExpression="Light mechanics" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="9A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="14" LogLevel="-1" UseTTSTextExpression="Stack" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="1000">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="58" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="15" LogLevel="-1" UseTTSTextExpression="Tank cleaves" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="5B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="16" LogLevel="-1" UseTTSTextExpression="Debuff" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="5F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -619,288 +598,6 @@
       </Folder>
       <Folder Id="bb6b2664-ccc2-4d8a-b30e-89ea03bb17e6" Name="Combat (enable whatever you want)" Enabled="true">
         <Folders>
-          <Folder Id="50c1dfb7-45a9-453f-befc-631fcb59b95d" Name="Auto Attack Timer (README inside)" Enabled="false">
-            <Folders>
-              <Folder Id="ef37dd66-6357-4eff-a5c4-0c317a6a95fd" Name="Backend" Enabled="true">
-                <Folders />
-                <Triggers>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="currentHaste 1A (SAM/BLM/WHM) [Network]" Id="45cc9830-266b-47f8-9888-b0c3b344450f" RegularExpression="\A(26|30)\|[^\|]*\|(?&lt;statusID&gt;(513|9[dD]|2[eE]1))\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)" DebugLevel="None">
-                    <Actions>
-                      <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0.13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${statusID}" ExpressionTypeL="String" ExpressionR="513" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="26" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${statusID}" ExpressionTypeL="String" ExpressionR="513" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="30" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0.15" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${statusID}" ExpressionTypeL="String" ExpressionR="2E1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="26" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${statusID}" ExpressionTypeL="String" ExpressionR="2E1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="30" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0.2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${statusID}" ExpressionTypeL="String" ExpressionR="9D" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="26" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="6" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${statusID}" ExpressionTypeL="String" ExpressionR="9D" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="30" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="7" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaModifier" VariableExpression="131/(${var:aaBase}*(1-${var:currentHaste}))" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="15" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
-                  </Trigger>
-                  <Trigger Enabled="true" Sequential="True" Name="currentHaste 1F (NIN/MNK/BRD)" Id="d4292f76-301e-417b-bd93-de462e3a0d15" RegularExpression="\A.{15}1F:(?&lt;actorID&gt;.{8}):[^:]*:(?&lt;GL&gt;[^:]*):(?&lt;Song&gt;.)" DebugLevel="None">
-                    <Actions>
-                      <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0.05*${func:substring(0,1):${GL}}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${actorID}].job}" ExpressionTypeL="String" ExpressionR="mnk" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${func:length:${GL}}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${actorID}].job}" ExpressionTypeL="String" ExpressionR="mnk" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${GL}" ExpressionTypeL="String" ExpressionR="14" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0.15" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${actorID}].job}" ExpressionTypeL="String" ExpressionR="nin" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${func:length:${GL}}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${actorID}].job}" ExpressionTypeL="String" ExpressionR="nin" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${GL}" ExpressionTypeL="String" ExpressionR="1E" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0.04*${func:substring(0,1):${GL}}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${actorID}].job}" ExpressionTypeL="String" ExpressionR="brd" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${Song}" ExpressionTypeL="String" ExpressionR="A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${func:length:${GL}}" ExpressionTypeL="Numeric" ExpressionR="7" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="6" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${actorID}].job}" ExpressionTypeL="String" ExpressionR="brd" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionGroup Enabled="true" Grouping="Or">
-                            <ConditionSingle Enabled="true" ExpressionL="${GL}" ExpressionTypeL="String" ExpressionR="17" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            <ConditionSingle Enabled="true" ExpressionL="${Song}" ExpressionTypeL="String" ExpressionR="A" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
-                            <ConditionGroup Enabled="true" Grouping="And">
-                              <ConditionSingle Enabled="true" ExpressionL="${Song}" ExpressionTypeL="String" ExpressionR="A" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                              <ConditionSingle Enabled="true" ExpressionL="${func:length:${GL}}" ExpressionTypeL="Numeric" ExpressionR="7" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
-                            </ConditionGroup>
-                          </ConditionGroup>
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="7" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaModifier" VariableExpression="131/(${var:aaBase}*(1-${var:currentHaste}))" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="15" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Trigger>
-                  <Trigger Enabled="true" Sequential="True" Name="Track Autos" Id="015864ba-db06-49a4-9521-3016244738bf" RegularExpression="\A.{15}15.{10}(?&lt;name&gt;[^:]*):0[78]:" DebugLevel="None">
-                    <Actions>
-                      <Action OrderNumber="1" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogressblack.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="1" AuraHIniExpression="7" AuraOIniExpression="100" AuraWTickExpression="min(ceiling(${_sincems}*${var:aaModifier}),131)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerForce="regexp,conditions" ActionType="Aura" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${_imageaura[aaAnchor].width}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="2" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogressblack.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="131" AuraHIniExpression="7" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerForce="regexp,conditions" ActionType="Aura" ExecutionDelayExpression="60000" Asynchronous="False" RefireInterrupt="True">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${_imageaura[aaAnchor].width}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                        </Condition>
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
-                  </Trigger>
-                  <Trigger Enabled="true" Sequential="True" Name="Casting" Id="8de89f3f-fb4d-4b9e-bafc-584ca86322d4" RegularExpression="\A.{15}(1[4567]):[^:]*:(?&lt;name&gt;[^ ]* [\w\-\']*)" DebugLevel="None">
-                    <Actions>
-                      <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentlyCasting" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="14" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="castingProgress" VariableExpression="${_imageaura[aaProgress].w}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="14" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${var:currentlyCasting}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="3" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogressblack.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="${_imageaura[aaProgress].w}" AuraHIniExpression="7" AuraOIniExpression="100" LogLevel="-1" VariableOp="SetNumeric" VariableName="casting" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="14" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${_imageaura[aaAnchor].width}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="castingProgress2" VariableExpression="${_imageaura[aaProgress].w}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${var:currentlyCasting}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="1[567]" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="5" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogressblack.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="${_imageaura[aaProgress].w}" AuraHIniExpression="7" AuraOIniExpression="100" AuraWTickExpression="min(ceiling((${_sincems}*${var:aaModifier})+${var:castingProgress2}),131)" LogLevel="-1" VariableOp="SetNumeric" VariableName="casting" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${var:currentlyCasting}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="1[567]" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                          <ConditionSingle Enabled="true" ExpressionL="${_imageaura[aaAnchor].width}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="6" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/progressauto.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="${var:castingProgress}" AuraHIniExpression="17" AuraOIniExpression="100" AuraWTickExpression="ceiling((${_sincems}*${var:aaModifier})+${var:castingProgress})" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentlyCasting" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="15" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${var:currentlyCasting}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="1[567]" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                        </Condition>
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
-                  </Trigger>
-                  <Trigger Enabled="true" Sequential="True" Name="aaBase" Id="e23ae068-45fa-46e5-ad0b-d42f51a4cba5" RegularExpression="\A.{15}0C.{15}(?&lt;jobID&gt;[\d]{1,2})" DebugLevel="None">
-                    <Actions>
-                      <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${var:jobIDsaved}" ExpressionTypeL="Numeric" ExpressionR="${jobID}" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="castingProgress" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${evar:castingProgress}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="castingProgress2" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${evar:castingProgress2}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="2240" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="19" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="2560" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="20" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="30" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="6" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="3360" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="31" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="7" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="2800" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="22" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="37" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="8" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="3040" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="23" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="9" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="3440" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="35" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="19" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="10" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="3280" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="25" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="11" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="3120" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="27" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="38" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="28" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="12" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="2640" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="31" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="34" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="13" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="2960" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="32" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="14" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="3200" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="33" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="15" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaModifier" VariableExpression="131/(${var:aaBase}*(1-${var:currentHaste}))" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="15" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="16" LogLevel="-1" VariableOp="SetNumeric" VariableName="jobIDsaved" VariableExpression="${jobID}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Trigger>
-                </Triggers>
-              </Folder>
-            </Folders>
-            <Triggers>
-              <Trigger Enabled="true" Sequential="True" Name="!README in Description tab of this trigger" Id="95a19820-36ca-41ba-9d37-70688b4b9b7c" RegularExpression="\A.{15}00:0038:(!aashow|!aahide)" DebugLevel="None" Description="Ingame commands: &#xD;&#xA;/echo !aashow&#xD;&#xA;/echo !aahide&#xD;&#xA;&#xD;&#xA;In order to change the location of the progress bar, first copy this entire folder to local triggers or you can't edit anything.&#xD;&#xA;Don't have it enabled as a local and remote trigger at the same time!&#xD;&#xA;&#xD;&#xA;To move the progress bar, switch to the &quot;Trigger actions&quot; tab of this trigger, double click the first action named &quot;Move me!&quot; &#xD;&#xA;and click the button saying &quot;Use visual guide for placement&quot;.  You can then drag it to whereever you want, save your selection &#xD;&#xA;with right click -&gt; save and everything will automatically adjust to where you put it. If you move it while already enabled, you will &#xD;&#xA;need to use the /echo !aashow command again for it to update.&#xD;&#xA;&#xD;&#xA;The trigger will show a progress bar displaying the time until your next auto attack is ready. Works exclusively for combat jobs and&#xD;&#xA;is intended for play at level 80 since lower levels weapons don't always have the same delay as level 80 weapons, I can't actually&#xD;&#xA;tell what your weapon delay is and just assume it's at the value that's standard for your job for current max level weapons.&#xD;&#xA;&#xD;&#xA;The only auto attack speed effects the trigger will take into account are SAM/BLM/WHM/NIN/MNK/BRD haste effects&#xD;&#xA;so you will not see any slows enemies put on you properly reflected here since I'd need to implement each of those individually.&#xD;&#xA;&#xD;&#xA;This trigger won't work within zone locked folders due to relying on network lines&#xD;&#xA;&#xD;&#xA;If you break something tell me on discord, Aya#0847&#xD;&#xA;---------------&#xD;&#xA;Documentation on how auto attack edge cases work:&#xD;&#xA;&#xD;&#xA;Haste effects being gained/lost between autos:&#xD;&#xA;Your next auto will happen based on the current haste effects - if you lose greased lightning 0.1s before an auto attack, that&#xD;&#xA;entire auto attack will be moved back as if you never had greased lightning. Conversely, gaining a haste effect does the opposite&#xD;&#xA;thing and moves the next auto forward in accordance with how potent that haste effect is - gaining a haste effect just before &#xD;&#xA;an auto that would have happened anyway soon will result in it happening instantly as you gain the effect. All this is reflected &#xD;&#xA;correctly in the trigger.&#xD;&#xA;&#xD;&#xA;Casts:&#xD;&#xA;Using anything with a cast bar pauses your auto attack timer until you make it to the slidecast window and this behavior should &#xD;&#xA;work properly in the trigger.&#xD;&#xA;&#xD;&#xA;Channels:&#xD;&#xA;Channeling something like improvisation on dancer simply disables your ability to auto attack but the timer will still progress&#xD;&#xA;as normal.&#xD;&#xA;&#xD;&#xA;TCJ:&#xD;&#xA;Tracking the time until first auto after TCJ is not supported due to TCJ being extremely weird.&#xD;&#xA;The first auto attack after it will happen at the first possible time that is your auto delay + some whole number.&#xD;&#xA;For example, without huton your auto delay is 2.56 and your next auto after TCJ can only occur after 3.56s, 4.56s,&#xD;&#xA;5.56s, 6.56s... etc. relative to the last auto before TCJ.&#xD;&#xA;As such, I simply don't know when your next auto will be until TCJ ends, at which point it will never take more than&#xD;&#xA;a full second for another auto attack to occur, implementing support for that is more effort than it's worth.">
-                <Actions>
-                  <Action OrderNumber="1" AuraName="aaAnchor" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aabackgroundblack.png" AuraXIniExpression="197" AuraYIniExpression="785" AuraWIniExpression="135" AuraHIniExpression="30" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" Description="Move me!" DescriptionOverride="True">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="!aashow" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="2" AuraOp="DeactivateAura" AuraName="aaAnchor" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="!aahide" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="3" AuraOp="DeactivateAura" AuraName="aaProgress" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="!aahide" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="4" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogressblack.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="131" AuraHIniExpression="7" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="20" Asynchronous="False">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="!aashow" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-            </Triggers>
-          </Folder>
           <Folder Id="c2c0a719-0e1a-4535-9165-371b8f288eef" Name="Actor Tick Timer (README inside)" Enabled="false">
             <Folders>
               <Folder Id="bd853da8-333b-4c2e-9fae-d9023421ef3a" Name="Backend" Enabled="true">
@@ -1128,6 +825,281 @@
             <Triggers>
               <Trigger Enabled="true" Source="None" Sequential="True" Name="!README in Description tab of this trigger" Id="5cc44ebc-0bca-4e1f-8ecc-3a9266fbde8d" RegularExpression="" DebugLevel="None" Description="This trigger calls out ghosted hits (i.e. abilities you casted but that didn't connect due to the boss becoming&#xD;&#xA;invulnerable or already being dead).">
                 <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="3a6fe4fb-c573-481a-827c-2808f19fa7a6" Name="Auto Attack Timer (README inside)" Enabled="false">
+            <Folders>
+              <Folder Id="b7a41567-a5bf-447d-87f7-d4c8fd2339ed" Name="Backend" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="currentHaste 1A (SAM/BLM/WHM) [Network]" Id="a1e19abf-1189-40d2-b5da-cd7858764829" RegularExpression="\A(26|30)\|[^\|]*\|(?&lt;statusID&gt;(513|9[dD]|2[eE]1))\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)" DebugLevel="None">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0.13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${statusID}" ExpressionTypeL="String" ExpressionR="513" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="26" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${statusID}" ExpressionTypeL="String" ExpressionR="513" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="30" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0.15" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${statusID}" ExpressionTypeL="String" ExpressionR="2E1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="26" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${statusID}" ExpressionTypeL="String" ExpressionR="2E1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="30" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0.2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${statusID}" ExpressionTypeL="String" ExpressionR="9D" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="26" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="6" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${statusID}" ExpressionTypeL="String" ExpressionR="9D" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="30" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="7" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaModifier" VariableExpression="131/(${var:aaBase}*(1-${var:currentHaste}))" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="15" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Sequential="True" Name="currentHaste 1F (NIN/MNK/BRD)" Id="f94599c1-641d-4dcd-8c73-b0b88c95b748" RegularExpression="\A.{15}1F:(?&lt;actorID&gt;.{8}):[^:]*:(?&lt;GL&gt;[^:]*):(?&lt;Song&gt;.)" DebugLevel="None">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0.2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${actorID}].job}" ExpressionTypeL="String" ExpressionR="mnk" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0.15" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${actorID}].job}" ExpressionTypeL="String" ExpressionR="nin" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${func:length:${GL}}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${actorID}].job}" ExpressionTypeL="String" ExpressionR="nin" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${GL}" ExpressionTypeL="String" ExpressionR="1E" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0.04*${func:substring(0,1):${GL}}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${actorID}].job}" ExpressionTypeL="String" ExpressionR="brd" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${Song}" ExpressionTypeL="String" ExpressionR="A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${func:length:${GL}}" ExpressionTypeL="Numeric" ExpressionR="7" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${actorID}].job}" ExpressionTypeL="String" ExpressionR="brd" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionGroup Enabled="true" Grouping="Or">
+                            <ConditionSingle Enabled="true" ExpressionL="${GL}" ExpressionTypeL="String" ExpressionR="17" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            <ConditionSingle Enabled="true" ExpressionL="${Song}" ExpressionTypeL="String" ExpressionR="A" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                            <ConditionGroup Enabled="true" Grouping="And">
+                              <ConditionSingle Enabled="true" ExpressionL="${Song}" ExpressionTypeL="String" ExpressionR="A" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                              <ConditionSingle Enabled="true" ExpressionL="${func:length:${GL}}" ExpressionTypeL="Numeric" ExpressionR="7" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                            </ConditionGroup>
+                          </ConditionGroup>
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="6" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaModifier" VariableExpression="131/(${var:aaBase}*(1-${var:currentHaste}))" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="15" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Sequential="True" Name="Track Autos" Id="60f68774-f834-43b5-ae3e-439fc38af176" RegularExpression="\A.{15}15.{10}(?&lt;name&gt;[^:]*):0[78]:" DebugLevel="None">
+                    <Actions>
+                      <Action OrderNumber="1" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogressblack.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="1" AuraHIniExpression="7" AuraOIniExpression="100" AuraWTickExpression="min(ceiling(${_sincems}*${var:aaModifier}),131)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerForce="regexp,conditions" ActionType="Aura" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_imageaura[aaAnchor].width}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogressblack.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="131" AuraHIniExpression="7" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerForce="regexp,conditions" ActionType="Aura" ExecutionDelayExpression="60000" Asynchronous="False" RefireInterrupt="True">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_imageaura[aaAnchor].width}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Sequential="True" Name="Casting" Id="36fdf37f-4eeb-443c-b3c4-c42f356e9cbd" RegularExpression="\A.{15}(1[4567]):[^:]*:(?&lt;name&gt;[^ ]* [\w\-\']*)" DebugLevel="None">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentlyCasting" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="14" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="castingProgress" VariableExpression="${_imageaura[aaProgress].w}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="14" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${var:currentlyCasting}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="3" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogressblack.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="${_imageaura[aaProgress].w}" AuraHIniExpression="7" AuraOIniExpression="100" LogLevel="-1" VariableOp="SetNumeric" VariableName="casting" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="14" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${_imageaura[aaAnchor].width}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="castingProgress2" VariableExpression="${_imageaura[aaProgress].w}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:currentlyCasting}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="1[567]" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogressblack.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="${_imageaura[aaProgress].w}" AuraHIniExpression="7" AuraOIniExpression="100" AuraWTickExpression="min(ceiling((${_sincems}*${var:aaModifier})+${var:castingProgress2}),131)" LogLevel="-1" VariableOp="SetNumeric" VariableName="casting" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:currentlyCasting}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="1[567]" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                          <ConditionSingle Enabled="true" ExpressionL="${_imageaura[aaAnchor].width}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="6" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/progressauto.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="${var:castingProgress}" AuraHIniExpression="17" AuraOIniExpression="100" AuraWTickExpression="ceiling((${_sincems}*${var:aaModifier})+${var:castingProgress})" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentlyCasting" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="15" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:currentlyCasting}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="1[567]" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Sequential="True" Name="aaBase" Id="d101730d-ba65-4abd-87a1-9b19c9172812" RegularExpression="\A.{15}0C.{15}(?&lt;jobID&gt;[\d]{1,2})" DebugLevel="None">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHaste" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:jobIDsaved}" ExpressionTypeL="Numeric" ExpressionR="${jobID}" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="castingProgress" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:castingProgress}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="castingProgress2" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:castingProgress2}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="2240" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="19" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="2560" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="20" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="30" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="6" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="3360" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="31" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="7" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="2800" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="22" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="37" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="8" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="3040" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="23" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="9" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="3440" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="35" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="19" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="10" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="3280" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="25" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="11" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="3120" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="27" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="38" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="28" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="12" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="2640" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="31" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="34" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="13" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="2960" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="32" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="14" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaBase" VariableExpression="3200" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="33" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${jobID}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="15" LogLevel="-1" VariableOp="SetNumeric" VariableName="aaModifier" VariableExpression="131/(${var:aaBase}*(1-${var:currentHaste}))" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="15" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="16" LogLevel="-1" VariableOp="SetNumeric" VariableName="jobIDsaved" VariableExpression="${jobID}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers>
+              <Trigger Enabled="true" Sequential="True" Name="!README in Description tab of this trigger" Id="de1470e5-d095-49ad-b246-47656bce5a99" RegularExpression="\A.{15}00:0038:(!aashow|!aahide)" DebugLevel="None" Description="Ingame commands: &#xD;&#xA;/echo !aashow&#xD;&#xA;/echo !aahide&#xD;&#xA;&#xD;&#xA;When enabling this trigger for the first time, either restart ACT or switch jobs ingame once so it initializes all of its variables.&#xD;&#xA;&#xD;&#xA;In order to change the location of the progress bar, first copy this entire folder to local triggers or you can't edit anything.&#xD;&#xA;Don't have it enabled as a local and remote trigger at the same time!&#xD;&#xA;&#xD;&#xA;To move the progress bar, switch to the &quot;Trigger actions&quot; tab of this trigger, double click the first action named &quot;Move me!&quot; &#xD;&#xA;and click the button saying &quot;Use visual guide for placement&quot;.  You can then drag it to whereever you want, save your selection &#xD;&#xA;with right click -&gt; save and everything will automatically adjust to where you put it. If you move it while already enabled, you will &#xD;&#xA;need to use the /echo !aashow command again for it to update.&#xD;&#xA;&#xD;&#xA;The trigger will show a progress bar displaying the time until your next auto attack is ready. Works exclusively for combat jobs and&#xD;&#xA;is intended for play at level 80 since lower levels weapons don't always have the same delay as level 80 weapons, I can't actually&#xD;&#xA;tell what your weapon delay is and just assume it's at the value that's standard for your job for current max level weapons.&#xD;&#xA;&#xD;&#xA;The only auto attack speed effects the trigger will take into account are SAM/BLM/WHM/NIN/MNK/BRD haste effects&#xD;&#xA;so you will not see any slows enemies put on you properly reflected here since I'd need to implement each of those individually.&#xD;&#xA;&#xD;&#xA;This trigger won't work within zone locked folders due to relying on network lines&#xD;&#xA;&#xD;&#xA;If you break something tell me on discord, Aya#0847&#xD;&#xA;---------------&#xD;&#xA;Documentation on how auto attack edge cases work:&#xD;&#xA;&#xD;&#xA;Haste effects being gained/lost between autos:&#xD;&#xA;Your next auto will happen based on the current haste effects - if you lose greased lightning 0.1s before an auto attack, that&#xD;&#xA;entire auto attack will be moved back as if you never had greased lightning. Conversely, gaining a haste effect does the opposite&#xD;&#xA;thing and moves the next auto forward in accordance with how potent that haste effect is - gaining a haste effect just before &#xD;&#xA;an auto that would have happened anyway soon will result in it happening instantly as you gain the effect. All this is reflected &#xD;&#xA;correctly in the trigger.&#xD;&#xA;&#xD;&#xA;Casts:&#xD;&#xA;Using anything with a cast bar pauses your auto attack timer until you make it to the slidecast window and this behavior should &#xD;&#xA;work properly in the trigger.&#xD;&#xA;&#xD;&#xA;Channels:&#xD;&#xA;Channeling something like improvisation on dancer simply disables your ability to auto attack but the timer will still progress&#xD;&#xA;as normal.&#xD;&#xA;&#xD;&#xA;TCJ:&#xD;&#xA;Tracking the time until first auto after TCJ is not supported due to TCJ being extremely weird.&#xD;&#xA;The first auto attack after it will happen at the first possible time that is your auto delay + some whole number.&#xD;&#xA;For example, without huton your auto delay is 2.56 and your next auto after TCJ can only occur after 3.56s, 4.56s,&#xD;&#xA;5.56s, 6.56s... etc. relative to the last auto before TCJ.&#xD;&#xA;As such, I simply don't know when your next auto will be until TCJ ends, at which point it will never take more than&#xD;&#xA;a full second for another auto attack to occur, implementing support for that is more effort than it's worth.">
+                <Actions>
+                  <Action OrderNumber="1" AuraName="aaAnchor" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aabackgroundblack.png" AuraXIniExpression="197" AuraYIniExpression="785" AuraWIniExpression="135" AuraHIniExpression="30" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" Description="Move me!" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="!aashow" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" AuraOp="DeactivateAura" AuraName="aaAnchor" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="!aahide" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" AuraOp="DeactivateAura" AuraName="aaProgress" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="!aahide" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogressblack.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="131" AuraHIniExpression="7" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="20" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="!aashow" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
             </Triggers>
