@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="ea431ab0-d6af-4e44-b353-2e8dc7dbf31b" Name="Aya's Repository (Aya#0847)" Enabled="true">
+  <ExportedFolder Id="ea431ab0-d6af-4e44-b353-2e8dc7dbf31b" Name="Aya's Repository (Aya#0847)" Enabled="false">
     <Folders>
       <Folder Id="5757daa6-b20f-4abf-9bd2-39a26ddc100d" Name="Eden's Promise" Enabled="true">
         <Folders>
@@ -161,6 +161,377 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                  <Folder Id="2994eba7-07b0-4ab8-a18a-8b15fbe6af1e" Name="BLM Relative Rocks v1.2 (README inside, turn this folder on to use)" Enabled="false">
+                    <Folders>
+                      <Folder Id="b7395470-1b02-464b-a674-d9a31458ae62" Name="Headmarker Offset Check" Enabled="true">
+                        <Folders />
+                        <Triggers>
+                          <Trigger Enabled="true" Name="Formless Judgment/Earthen Fury" Id="9eae2d65-e810-4abd-8a33-0786801da81a" RegularExpression="\A.{15}14:58(A9|9F)">
+                            <Actions>
+                              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="e12TB" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="A9" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="2" FolderId="0981959c-2a87-4975-98a1-4af82bbb4fe7" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="9F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${var:blmParty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="3" LogLevel="-1" VariableName="e12TB" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="5000">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="A9" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="4" FolderOp="DisableFolder" FolderId="0981959c-2a87-4975-98a1-4af82bbb4fe7" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder" ExecutionDelayExpression="55000" RefireInterrupt="True">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="9F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="Check TB marker" Id="044c6e1b-cb63-484f-a5eb-0ed00d062dd5" RegularExpression="\A.{15}1B.{10}[^:]*.{12}(?&lt;fakeID&gt;[^:]*)" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                            <Actions>
+                              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="currentHeadmarkerOffset" VariableExpression="hex2dec(${fakeID})-218" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="2500" Asynchronous="False">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${var:e12TB}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                </Condition>
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="Reset" Id="25da0da3-56a9-4d43-aa75-1acff5d6e3a7" RegularExpression="\A.{15}(01|21.{10}4.{5}(03|10))">
+                            <Actions>
+                              <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableName="currentSet" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableName="blmParty" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableName="setColor" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableName="currentHeadmarkerOffset" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="5" ListVariableName="set2Blue" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="77a2d269-1933-40aa-a127-c7e023b267be" ActionType="Trigger">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="BLM Detector (turns itself on/off too)" Id="77a2d269-1933-40aa-a127-c7e023b267be" RegularExpression="\A.{15}14:DF9:">
+                            <Actions>
+                              <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="blmParty" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="77a2d269-1933-40aa-a127-c7e023b267be" ActionType="Trigger" ExecutionDelayExpression="500">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                        </Triggers>
+                      </Folder>
+                      <Folder Id="0981959c-2a87-4975-98a1-4af82bbb4fe7" Name="Automatically turns on/off as needed" Enabled="false">
+                        <Folders />
+                        <Triggers>
+                          <Trigger Enabled="true" Name="Find BLM color + set 2 blue players" Id="2f2f9073-8bbd-4b83-bf60-25299286991d" RegularExpression="\A.{15}1B.{10}(?&lt;name&gt;[^:]*).{11}(?&lt;ID&gt;[^:]*)" MutexToCapture="blmMarkers">
+                            <Actions>
+                              <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="setColor" VariableExpression="blue" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].job}" ExpressionTypeL="String" ExpressionR="blm" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="187" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="setColor" VariableExpression="yellow" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].job}" ExpressionTypeL="String" ExpressionR="blm" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="185" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="setColor" VariableExpression="orange" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].job}" ExpressionTypeL="String" ExpressionR="blm" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="186" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="set2Blue" ListVariableExpression="${name}" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].job}" ExpressionTypeL="String" ExpressionR="blm" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="187" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                </Condition>
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Sequential="True" Name="Priority" Id="1be608cf-22df-42f8-bb22-bf2be6ce561e" RegularExpression="\A.{15}03[^\(]*\([^\(]*\(9815" PeriodRefire="Deny" RefirePeriodExpression="50000">
+                            <Actions>
+                              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="SCH" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="AST" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="WHM" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="SMN" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="RDM" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="BRD" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="MCH" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="DNC" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="MNK" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="10" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="DRG" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="11" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="SAM" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="12" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="NIN" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="13" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="PLD" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="14" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="WAR" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="15" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="DRK" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="16" ListVariableOp="Push" ListVariableName="northeastPrio" ListVariableExpression="GNB" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${lvar:northeastPrio.size}" ExpressionTypeL="Numeric" ExpressionR="16" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                            </Condition>
+                          </Trigger>
+                          <Trigger Enabled="true" Name="Rock Set Counter" Id="041d82ee-9741-430c-8da4-b50f9685b1bd" RegularExpression="\A.{15}03[^\(]*\([^\(]*\(9815" PeriodRefire="Deny" RefirePeriodExpression="2000">
+                            <Actions>
+                              <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="currentSet" VariableExpression="${var:currentSet}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="TTS" Id="57f34e79-bf26-4cb8-89fe-f9da1e516aa8" RegularExpression="\A.{15}1B.{10}(?&lt;name&gt;[^:]*).{11}(?&lt;ID&gt;[^:]*)">
+                            <Actions>
+                              <Action OrderNumber="1" LogMessageText="waiting for BLM color" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" ExecutionDelayExpression="500" Asynchronous="False" DebugLevel="None">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="North" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionGroup Enabled="true" Grouping="Or">
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="yellow" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="orange" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                  <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                  <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="185" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="Northeast" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="185" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="186" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionGroup Enabled="true" Grouping="Or">
+                                      <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                      <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    </ConditionGroup>
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="blue" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="187" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="orange" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionGroup Enabled="true" Grouping="Or">
+                                      <ConditionGroup Enabled="true" Grouping="And">
+                                        <ConditionSingle Enabled="true" ExpressionL="${lvar:northeastPrio.indexof(${_ffxiventity[${name}].job})}" ExpressionTypeL="Numeric" ExpressionR="${lvar:northeastPrio.indexof(${_ffxiventity[${lvar:set2Blue[2]}].job})}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                                        <ConditionSingle Enabled="true" ExpressionL="${lvar:set2Blue[1]}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                      </ConditionGroup>
+                                      <ConditionGroup Enabled="true" Grouping="And">
+                                        <ConditionSingle Enabled="true" ExpressionL="${lvar:northeastPrio.indexof(${_ffxiventity[${name}].job})}" ExpressionTypeL="Numeric" ExpressionR="${lvar:northeastPrio.indexof(${_ffxiventity[${lvar:set2Blue[1]}].job})}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                                        <ConditionSingle Enabled="true" ExpressionL="${lvar:set2Blue[2]}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                      </ConditionGroup>
+                                    </ConditionGroup>
+                                  </ConditionGroup>
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="187" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="East" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                  <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="186" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                  <ConditionGroup Enabled="true" Grouping="Or">
+                                    <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="Southeast" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionGroup Enabled="true" Grouping="Or">
+                                      <ConditionGroup Enabled="true" Grouping="And">
+                                        <ConditionGroup Enabled="true" Grouping="Or">
+                                          <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="blue" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                          <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="yellow" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                        </ConditionGroup>
+                                        <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="186" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                      </ConditionGroup>
+                                      <ConditionGroup Enabled="true" Grouping="And">
+                                        <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="orange" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                        <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="185" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                      </ConditionGroup>
+                                    </ConditionGroup>
+                                    <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="dps" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionGroup Enabled="true" Grouping="Or">
+                                      <ConditionGroup Enabled="true" Grouping="And">
+                                        <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="186" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                        <ConditionGroup Enabled="true" Grouping="Or">
+                                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                        </ConditionGroup>
+                                        <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="orange" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                      </ConditionGroup>
+                                      <ConditionGroup Enabled="true" Grouping="And">
+                                        <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="187" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                        <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="blue" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                      </ConditionGroup>
+                                    </ConditionGroup>
+                                  </ConditionGroup>
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="187" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="dps" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="South" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                  <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="185" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="blue" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="7" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="Southwest" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionGroup Enabled="true" Grouping="Or">
+                                      <ConditionGroup Enabled="true" Grouping="And">
+                                        <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                        <ConditionGroup Enabled="true" Grouping="Or">
+                                          <ConditionGroup Enabled="true" Grouping="And">
+                                            <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="blue" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                            <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="185" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                          </ConditionGroup>
+                                          <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="187" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                        </ConditionGroup>
+                                      </ConditionGroup>
+                                      <ConditionGroup Enabled="true" Grouping="And">
+                                        <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                        <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="blue" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                        <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="186" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                      </ConditionGroup>
+                                    </ConditionGroup>
+                                    <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="dps" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="187" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="orange" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionGroup Enabled="true" Grouping="Or">
+                                      <ConditionGroup Enabled="true" Grouping="And">
+                                        <ConditionSingle Enabled="true" ExpressionL="${lvar:northeastPrio.indexof(${_ffxiventity[${name}].job})}" ExpressionTypeL="Numeric" ExpressionR="${lvar:northeastPrio.indexof(${_ffxiventity[${lvar:set2Blue[2]}].job})}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                                        <ConditionSingle Enabled="true" ExpressionL="${lvar:set2Blue[1]}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                      </ConditionGroup>
+                                      <ConditionGroup Enabled="true" Grouping="And">
+                                        <ConditionSingle Enabled="true" ExpressionL="${lvar:set2Blue[2]}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                        <ConditionSingle Enabled="true" ExpressionL="${lvar:northeastPrio.indexof(${_ffxiventity[${name}].job})}" ExpressionTypeL="Numeric" ExpressionR="${lvar:northeastPrio.indexof(${_ffxiventity[${lvar:set2Blue[1]}].job})}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                                      </ConditionGroup>
+                                    </ConditionGroup>
+                                  </ConditionGroup>
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="186" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                  </ConditionGroup>
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="8" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="West" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="dps" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                  <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="185" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="9" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="Northwest" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="dps" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="186" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:setColor}" ExpressionTypeL="String" ExpressionR="orange" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionGroup Enabled="true" Grouping="Or">
+                                      <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                      <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    </ConditionGroup>
+                                  </ConditionGroup>
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="hex2dec(${ID})-${var:currentHeadmarkerOffset}" ExpressionTypeL="Numeric" ExpressionR="185" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:currentSet}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${name}].role}" ExpressionTypeL="String" ExpressionR="healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                </Condition>
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Trigger>
+                        </Triggers>
+                      </Folder>
+                    </Folders>
+                    <Triggers>
+                      <Trigger Enabled="true" Source="None" Name="!README in Description tab of this trigger" Id="f73c3099-f8e0-49a9-8884-6109d8a9e6a2" RegularExpression="" Description="This trigger alls out your cardinal/intercardinal position as seen in&#xD;&#xA;https://media.discordapp.net/attachments/786557239292985364/798996683685232640/blm_uptime.png&#xD;&#xA;&#xD;&#xA;The folder that does all the stuff automatically turns on for a minute when the boss uses Earthen Fury, it turns itself off to save &#xD;&#xA;resources.&#xD;&#xA;&#xD;&#xA;The &quot;Priority&quot; trigger dictates who gets priority on the northeast blue spot in set 2 when BLM has orange, it's easy to modify and &#xD;&#xA;the order the jobs are added to the list there is the priority and you can move jobs up or down to modify it to your liking.&#xD;&#xA;Make sure your entire group has the same priority set there or people can get the same blue spot called.&#xD;&#xA;Higher up in the trigger = higher priority to be picked for northeast.&#xD;&#xA;&#xD;&#xA;If you're the BLM don't use this, you're afk northwest anyway and all the DPS TTS assumes that it's from the non-BLM pov. Your&#xD;&#xA;job is to convince your entire party to use this.&#xD;&#xA;&#xD;&#xA;Version history:&#xD;&#xA;v1.1: Added TTS for set 3&#xD;&#xA;v1.2: Folder now won't activate if there is no BLM in the party (since you're probably not doing this strat then)">
+                        <Actions />
+                        <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -490,6 +861,111 @@
                   </Trigger>
                 </Triggers>
               </Folder>
+              <Folder Id="c132cbb5-3a48-4488-a0bd-8656734502e5" Name="Prismatic Solver v1.4" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Casters" Id="df8ec885-b550-4c1d-8ecd-1f51395d669b" RegularExpression="^20\|[^\|]*\|(?&lt;actorID&gt;[^\|]*)\|[^\|]*\|56A5\|" DebugLevel="None" MutexToCapture="casterMutex">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="casterIncrement" VariableExpression="${var:casterIncrement}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="prismaticCaster${var:casterIncrement}" VariableExpression="${func:dec2hex:${numeric:hex2dec(${actorID})+1}}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="20">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Concealed" Id="a6cb59b6-4503-4b06-9be4-b1436e75957d" RegularExpression="^26\|[^\|]*\|655\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;actorID&gt;[^\|]*)\|" MutexToCapture="concealMutex" Description="why are there no lookup operations for table variables">
+                    <Actions>
+                      <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="concealList" ListVariableExpression="${actorID}" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="200">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="xList" ListVariableExpression="round(${_ffxiventity[${actorID}].x})" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="20">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="yList" ListVariableExpression="round(${_ffxiventity[${actorID}].y})" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="TTS" Id="7f1029f6-0fbb-4231-99c3-a606155984d5" RegularExpression="^20\|[^\|]*\|(?&lt;actorID&gt;[^\|]*)\|[^\|]*\|56A5\|" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="North" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="200">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${lvar:xList[${lvar:concealList.lastindexof(${var:prismaticCaster1})}]}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${lvar:xList[${lvar:concealList.lastindexof(${var:prismaticCaster2})}]}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${lvar:xList[${lvar:concealList.lastindexof(${var:prismaticCaster3})}]}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="East" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="20">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[1]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${lvar:yList[${lvar:concealList.lastindexof(${var:prismaticCaster1})}]}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${lvar:yList[${lvar:concealList.lastindexof(${var:prismaticCaster2})}]}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${lvar:yList[${lvar:concealList.lastindexof(${var:prismaticCaster3})}]}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="Northeast" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="20">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[1]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[2]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          <ConditionGroup Enabled="true" Grouping="And">
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:xList[${lvar:concealList.lastindexof(${var:prismaticCaster1})}]}" ExpressionTypeL="Numeric" ExpressionR="114" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:yList[${lvar:concealList.lastindexof(${var:prismaticCaster1})}]}" ExpressionTypeL="Numeric" ExpressionR="86" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          </ConditionGroup>
+                          <ConditionGroup Enabled="true" Grouping="And">
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:xList[${lvar:concealList.lastindexof(${var:prismaticCaster2})}]}" ExpressionTypeL="Numeric" ExpressionR="114" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:yList[${lvar:concealList.lastindexof(${var:prismaticCaster2})}]}" ExpressionTypeL="Numeric" ExpressionR="86" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          </ConditionGroup>
+                          <ConditionGroup Enabled="true" Grouping="And">
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:xList[${lvar:concealList.lastindexof(${var:prismaticCaster3})}]}" ExpressionTypeL="Numeric" ExpressionR="114" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:yList[${lvar:concealList.lastindexof(${var:prismaticCaster3})}]}" ExpressionTypeL="Numeric" ExpressionR="86" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          </ConditionGroup>
+                          <ConditionGroup Enabled="true" Grouping="And">
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:yList[${lvar:concealList.lastindexof(${var:prismaticCaster1})}]}" ExpressionTypeL="Numeric" ExpressionR="114" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:xList[${lvar:concealList.lastindexof(${var:prismaticCaster1})}]}" ExpressionTypeL="Numeric" ExpressionR="86" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          </ConditionGroup>
+                          <ConditionGroup Enabled="true" Grouping="And">
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:yList[${lvar:concealList.lastindexof(${var:prismaticCaster2})}]}" ExpressionTypeL="Numeric" ExpressionR="114" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:xList[${lvar:concealList.lastindexof(${var:prismaticCaster2})}]}" ExpressionTypeL="Numeric" ExpressionR="86" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          </ConditionGroup>
+                          <ConditionGroup Enabled="true" Grouping="And">
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:yList[${lvar:concealList.lastindexof(${var:prismaticCaster3})}]}" ExpressionTypeL="Numeric" ExpressionR="114" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:xList[${lvar:concealList.lastindexof(${var:prismaticCaster3})}]}" ExpressionTypeL="Numeric" ExpressionR="86" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          </ConditionGroup>
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="Southeast" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="30">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[1]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[2]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[3]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" VariableName="casterIncrement" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="5000">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" VariableOp="UnsetRegex" VariableName="prismaticCaster" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="README in Description tab of this trigger" Id="0961efa3-9940-4b57-ad36-ba2958e76196" RegularExpression="" Description="This trigger calls out Prismatic Deception safe spots when the casts of Blasting Zone start on the enemy list. The calls by default &#xD;&#xA;are North, Northeast, East, Southeast, obviously the cardinal/intercardinal direction opposite of what the trigger calls will be safe &#xD;&#xA;too. If you prefer, you can change the things the TTS actions call in the Trigger Actions tab of the TTS trigger, but don't move the&#xD;&#xA;actions up or down since that breaks some conditions.&#xD;&#xA;&#xD;&#xA;If you experience a wrong call, ideally provide a video clip of it and a copy of your log file to me over at Aya#0847 on discord so &#xD;&#xA;I can look into it. If you experience no call whatsoever, your audio settings prevent triggernometry TTS from reaching you or you&#xD;&#xA;aren't on triggernometry version 1.1.3.1 or above which this trigger requires.&#xD;&#xA;&#xD;&#xA;Version History:&#xD;&#xA;v1.4: Public Release">
+                    <Actions />
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Reset" Id="d1994a06-129b-4f45-a92a-9fd166111f32" RegularExpression="\A33\|[^\|]*\|[^\|]*\|40{5}(03|10)">
+                    <Actions>
+                      <Action OrderNumber="1" ListVariableOp="UnsetRegex" ListVariableName="xList|yList|concealList" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
             </Folders>
             <Triggers>
               <Trigger Enabled="true" Name="Elemental callouts" Id="711c56b6-d1cd-4c17-b3eb-8f2eb32ef021" RegularExpression="\A.{15}14:56([^:]*)">
@@ -596,7 +1072,7 @@
         </Folders>
         <Triggers />
       </Folder>
-      <Folder Id="bb6b2664-ccc2-4d8a-b30e-89ea03bb17e6" Name="Combat (enable whatever you want)" Enabled="true">
+      <Folder Id="bb6b2664-ccc2-4d8a-b30e-89ea03bb17e6" Name="Combat (READMEs inside folders, enable whatever you want)" Enabled="false">
         <Folders>
           <Folder Id="c2c0a719-0e1a-4535-9165-371b8f288eef" Name="Actor Tick Timer (README inside)" Enabled="false">
             <Folders>
@@ -1097,6 +1573,119 @@
                   <Action OrderNumber="4" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogressblack.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="131" AuraHIniExpression="7" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="20" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="!aashow" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="304fa547-dcd7-4a66-a855-f2bac33dbac2" Name="Snapshot Boycott v1.5" Enabled="false">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Gapcloser Keybind" Id="7e69804a-34ef-4790-b83f-2a05db37bea1" RegularExpression="\A0?1\|" EditAutofire="True">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="gapcloserKeybind" VariableExpression="50" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Button Presser" Id="10889bb8-4af6-419d-aa93-e48725af90d2" RegularExpression="\A21\|[^\|]*\|1[^\|]*\|([^\|]*)\|(47|8D6)\|" DebugLevel="None">
+                <Actions>
+                  <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="${var:gapcloserKeybind}" KeyPressWindow="FINAL FANTASY XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="gapcloserUsed" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="10889bb8-4af6-419d-aa93-e48725af90d2" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" KeypressType="WindowMessage" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="10889bb8-4af6-419d-aa93-e48725af90d2" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="10">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionGroup Enabled="true" Grouping="Or">
+                        <ConditionSingle Enabled="true" ExpressionL="${evar:mashStart}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_systemtimems}-${var:mashStart}" ExpressionTypeL="Numeric" ExpressionR="500" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      </ConditionGroup>
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="10889bb8-4af6-419d-aa93-e48725af90d2" ActionType="Trigger" ExecutionDelayExpression="300">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Pick your snapshots (README in Description tab of this trigger)" Id="9e77f51a-c95f-4433-a47b-d74439ecd4f2" RegularExpression="\A2[12]\|[^\|]*\|4[^\|]*\|[^\|]*\|5(B01|614|717|655|733)" PeriodRefire="Deny" RefirePeriodExpression="1000" Description="By default, nothing in this trigger is enabled.&#xD;&#xA;Pick whether you want a keypress to be sent or a beep to occur at the snapshots of the supported mechanics by checking the&#xD;&#xA;box next to the corresponding triggers in the &quot;Trigger actions&quot; tab of this trigger.. The keypress actions are meant to be used to&#xD;&#xA;use Shoulder Tackle (or other gapclosers if other melee jobs end up using this) right as the snapshot happens.&#xD;&#xA;&#xD;&#xA;In order to use any of the keybind sending actions, you need to edit the &quot;Gapcloser Keybind&quot; trigger. It sets a variable that by&#xD;&#xA;default contains the number 49 which would result in a &quot;1&quot; keypress being sent to your game, but that's probably not most people's&#xD;&#xA;gapcloser keybind. Head over to https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.keys?view=net-5.0 to find&#xD;&#xA;the number you have to enter for the key of your choice to be sent. &#xD;&#xA;Note that some keys are not listed and no keybinds with modifiers (i.e. ctrl, alt, shift + anything) are supported, but you can &#xD;&#xA;simply put your gapcloser on another hotbar and bind it to something else there specifically for the purposes of the trigger. &#xD;&#xA;Keybinds still work even if you hide said hotbar.&#xD;&#xA;&#xD;&#xA;When any of the snapshots the keybind trigger actions look for occur, it will begin mashing the keybind of your choice for up to&#xD;&#xA;500 ms or until Shoulder Tackle was used, whatever happens first. The mashing stopping when the cast is seen won't work for&#xD;&#xA;other jobs by default, if you're using this for non-ST gapclosers edit the action ID in the regex of the &quot;Button Presser&quot; trigger&#xD;&#xA;from 47 to whatever ID (in hex) your job's gap closer is.&#xD;&#xA;&#xD;&#xA;Changelog:&#xD;&#xA;v1.1: Made it mash the button a bunch&#xD;&#xA;v1.2: No longer has a stroke after shoulder tackles&#xD;&#xA;v1.3: Previously, if 2 or more got hit by the snapshot, it wouldn't recognize it&#xD;&#xA;v1.4: Previously, if 2 or more got hit by the snaphot, it'd fire twice&#xD;&#xA;v1.5: Would previously freak out if you were playing with another Monk">
+                <Actions>
+                  <Action OrderNumber="1" KeypressType="WindowMessage" LogLevel="-1" VariableOp="SetNumeric" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="10889bb8-4af6-419d-aa93-e48725af90d2" TriggerForce="regexp" ActionType="Trigger" Description="shuffling dog keypress" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="733" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" KeypressType="WindowMessage" LogLevel="-1" VariableOp="SetNumeric" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="10889bb8-4af6-419d-aa93-e48725af90d2" TriggerForce="regexp" Enabled="False" ActionType="Trigger" Description="E9s Wide Angle final AoE (Send keypress)" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="B01" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" SystemBeepFreqExpression="400" SystemBeepLengthExpression="150" KeypressType="WindowMessage" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="SystemBeep" Description="E9s Wide Angle final AoE (Beep)" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="B01" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" SystemBeepFreqExpression="400" SystemBeepLengthExpression="150" KeypressType="WindowMessage" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="SystemBeep" Description="shuffling dog beep" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="733" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" KeypressType="WindowMessage" LogLevel="-1" VariableOp="SetNumeric" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="10889bb8-4af6-419d-aa93-e48725af90d2" TriggerForce="regexp" Enabled="False" ActionType="Trigger" Description="E9s Anti-Air first AoE (Send keypress)" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="614" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="6" SystemBeepFreqExpression="400" SystemBeepLengthExpression="150" KeypressType="WindowMessage" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="SystemBeep" Description="E9s Anti-Air first AoE (Beep)" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="614" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="7" KeypressType="WindowMessage" LogLevel="-1" VariableOp="SetNumeric" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="10889bb8-4af6-419d-aa93-e48725af90d2" TriggerForce="regexp" Enabled="False" ActionType="Trigger" Description="E10s dog transition (Send keypress)" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="717" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="8" SystemBeepFreqExpression="400" SystemBeepLengthExpression="150" KeypressType="WindowMessage" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="SystemBeep" Description="E10s dog transition (Beep)" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="717" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="9" KeypressType="WindowMessage" LogLevel="-1" VariableOp="SetNumeric" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="10889bb8-4af6-419d-aa93-e48725af90d2" TriggerForce="regexp" Enabled="False" ActionType="Trigger" Description="E11s Lightning Burnt Strike (Send keypress)" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="655" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="10" SystemBeepFreqExpression="400" SystemBeepLengthExpression="150" KeypressType="WindowMessage" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="SystemBeep" Description="E11s Lightning Burnt Strike (Beep)" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="655" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="11" LogLevel="-1" VariableOp="SetNumeric" VariableName="mashStart" VariableExpression="${_systemtimems}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Description="Don't touch this part" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[5]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[3]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[1]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[7]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="12" LogLevel="-1" VariableName="mashStart" VariableExpression="${_systemtimems}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="1000" Description="Don't touch this part" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[5]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[3]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[1]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[7]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
                 </Actions>
