@@ -1336,18 +1336,17 @@
                   <Trigger Enabled="true" Sequential="True" Name="Track Autos" Id="8f18d03a-c4a2-42e3-b2c4-0cef66c4e82e" RegularExpression="\A.{15}15.{10}(?&lt;name&gt;[^:]*):0[78]:" DebugLevel="None">
                     <Actions>
                       <Action OrderNumber="1" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogress2.png" AuraXIniExpression="${_imageaura[aaAnchor].x}" AuraYIniExpression="${_imageaura[aaAnchor].y}" AuraWIniExpression="1" AuraHIniExpression="17" AuraOIniExpression="100" AuraWTickExpression="min(ceiling(${_sincems}*${var:aaModifier}),152)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerForce="regexp,conditions" ActionType="Aura" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${_imageaura[aaAnchor].width}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                        </Condition>
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogress2.png" AuraXIniExpression="${_imageaura[aaAnchor].x}" AuraYIniExpression="${_imageaura[aaAnchor].y}" AuraWIniExpression="152" AuraHIniExpression="17" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerForce="regexp,conditions" ActionType="Aura" ExecutionDelayExpression="60000" Asynchronous="False" RefireInterrupt="True">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${_imageaura[aaAnchor].width}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                        </Condition>
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
-                    <Condition Enabled="true" Grouping="Or">
+                    <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_imageaura[aaAnchor].width}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                   </Trigger>
                   <Trigger Enabled="true" Sequential="True" Name="Casting" Id="7228a3a0-bfbe-4bbb-b0d1-46b34b356bba" RegularExpression="\A.{15}(1[4567]):[^:]*:(?&lt;name&gt;[^ ]* [\w\-\']*)" DebugLevel="None">
@@ -1356,39 +1355,46 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="14" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="castingProgress" VariableExpression="${_imageaura[aaProgress].w}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="14" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${var:currentlyCasting}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogress2.png" AuraXIniExpression="${_imageaura[aaAnchor].x}" AuraYIniExpression="${_imageaura[aaAnchor].y}" AuraWIniExpression="${_imageaura[aaProgress].w}" AuraHIniExpression="17" AuraOIniExpression="100" VariableOp="SetNumeric" VariableName="casting" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="14" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="castingProgress2" VariableExpression="${_imageaura[aaProgress].w}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${var:currentlyCasting}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="1[567]" ExpressionTypeR="String" ConditionType="RegexMatch" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="5" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/aaprogress2.png" AuraXIniExpression="${_imageaura[aaAnchor].x}" AuraYIniExpression="${_imageaura[aaAnchor].y}" AuraWIniExpression="${_imageaura[aaProgress].w}" AuraHIniExpression="17" AuraOIniExpression="100" AuraWTickExpression="min(ceiling((${_sincems}*${var:aaModifier})+${var:castingProgress2}),152)" VariableOp="SetNumeric" VariableName="casting" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${var:currentlyCasting}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="1[567]" ExpressionTypeR="String" ConditionType="RegexMatch" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="6" AuraName="aaProgress" AuraImage="https://raw.githubusercontent.com/ayaliz/gaming/master/Icons/progressauto.png" AuraXIniExpression="${_imageaura[aaAnchor].x}+2" AuraYIniExpression="${_imageaura[aaAnchor].y}+2" AuraWIniExpression="${var:castingProgress}" AuraHIniExpression="17" AuraOIniExpression="100" AuraWTickExpression="ceiling((${_sincems}*${var:aaModifier})+${var:castingProgress})" VariableOp="SetNumeric" VariableName="currentlyCasting" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="15" Asynchronous="False">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${var:currentlyCasting}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="1[567]" ExpressionTypeR="String" ConditionType="RegexMatch" />
                         </Condition>
+                        <Conditions />
                       </Action>
                     </Actions>
-                    <Condition Enabled="true" Grouping="Or">
+                    <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_imageaura[aaAnchor].width}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="aaBase" Id="fa098400-3a2c-4c49-9496-fe87c6962d20" RegularExpression="\A12\|[^\|]*\|(?&lt;jobID&gt;[^\|]*)\|.*\|(?&lt;tenacity&gt;[^\|]*)\|" DebugLevel="None">
