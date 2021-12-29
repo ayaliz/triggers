@@ -1539,7 +1539,6 @@
                     <Actions>
                       <Action OrderNumber="1" VariableName="${sequenceNumber}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" DebugLevel="None">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -1548,7 +1547,7 @@
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="true" Sequential="True" Name="!README in Description tab of this trigger" Id="6c836c03-ccf4-443c-bb6a-21a7dca3ef6e" RegularExpression="\A.{15}00:0038:(!gbon|!gboff)" DebugLevel="None" Description="Ingame commands: &#xD;&#xA;/echo !gbon&#xD;&#xA;/echo !gboff&#xD;&#xA;&#xD;&#xA;This trigger calls out ghosted attacks (i.e. damage actions you casted but that didn't connect due to the target becoming&#xD;&#xA;invulnerable or the damage being 100% overkill due to the enemy dying or being stuck at 1 HP due to mechanics).&#xD;&#xA;&#xD;&#xA;It won't activate in AOE situations (using AOE skills on a single target still works) since in logs it looks like something ghosts&#xD;&#xA;as long as it ghosted on what the game considers to be the primary target of the AOE, even if it did damage elsewhere.&#xD;&#xA;&#xD;&#xA;Note that if you're trying this on a dummy, you may be overkilling it pretty frequently resulting in the trigger complaining.">
+              <Trigger Enabled="true" Sequential="True" Name="!README in Description tab of this trigger" Id="6c836c03-ccf4-443c-bb6a-21a7dca3ef6e" RegularExpression="\A[^ ]* [^ ]* 00:0038::(!gbon|!gboff)" DebugLevel="None" Description="Ingame commands: &#xD;&#xA;/echo !gbon&#xD;&#xA;/echo !gboff&#xD;&#xA;&#xD;&#xA;This trigger calls out ghosted attacks (i.e. damage actions you casted but that didn't connect due to the target becoming&#xD;&#xA;invulnerable or the damage being 100% overkill due to the enemy dying or being stuck at 1 HP due to mechanics).&#xD;&#xA;&#xD;&#xA;It won't activate in AOE situations (using AOE skills on a single target still works) since in logs it looks like something ghosts&#xD;&#xA;as long as it ghosted on what the game considers to be the primary target of the AOE, even if it did damage elsewhere.&#xD;&#xA;&#xD;&#xA;Note that if you're trying this on a dummy, you may be overkilling it pretty frequently resulting in the trigger complaining.">
                 <Actions>
                   <Action OrderNumber="1" FolderId="d020b2ec-3ad3-40ef-8ef5-10e4eaaf6538" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" ActionType="Folder">
                     <Condition Enabled="true" Grouping="Or">
